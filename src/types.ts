@@ -7,4 +7,8 @@ type RegisteredProduct = {
   id: number;
 } & ProductsBody;
 
-export { ProductsBody, RegisteredProduct };
+enum HttpStatus {
+  CREATED = 201,
+}
+
+export { ProductsBody, RegisteredProduct, HttpStatus };
