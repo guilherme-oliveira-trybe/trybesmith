@@ -14,9 +14,20 @@ type Product = {
   orderId: number | null
 };
 
+type UsersBody = {
+  username: string;
+  classe: string;
+  level: number;
+  password: string;
+};
+
+type UserToken = {
+  token: string;
+};
+
 enum HttpStatus {
   CREATED = 201,
   OK = 200,
 }
 
-export { ProductsBody, RegisteredProduct, HttpStatus, Product };
+export { ProductsBody, RegisteredProduct, HttpStatus, Product, UsersBody, UserToken };
