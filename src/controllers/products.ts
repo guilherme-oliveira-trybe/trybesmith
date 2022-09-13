@@ -9,6 +9,11 @@ const ProductsController = {
 
     return res.status(HttpStatus.CREATED).json(result);
   },
+  getAll: async (_req: Request, res: Response) => {
+    const result = await ProductsService.getAll();
+
+    return res.status(HttpStatus.OK).json(result);
+  },
 };
 
 export default ProductsController;
