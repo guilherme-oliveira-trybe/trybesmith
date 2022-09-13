@@ -1,3 +1,4 @@
 import productRouter from './products';
+import userRouter from './users';
 
-export default productRouter;
+export { productRouter, userRouter };
