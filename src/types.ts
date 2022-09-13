@@ -25,9 +25,15 @@ type UserToken = {
   token: string;
 };
 
+type Order = {
+  id: number,
+  userId: number,
+  productsIds: number[]
+};
+
 enum HttpStatus {
   CREATED = 201,
   OK = 200,
 }
 
-export { ProductsBody, RegisteredProduct, HttpStatus, Product, UsersBody, UserToken };
+export { ProductsBody, RegisteredProduct, HttpStatus, Product, UsersBody, UserToken, Order };
