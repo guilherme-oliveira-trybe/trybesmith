@@ -1,3 +1,4 @@
 import ProductsModel from './products';
+import UserModel from './user';
 
-export default ProductsModel;
+export { ProductsModel, UserModel };
