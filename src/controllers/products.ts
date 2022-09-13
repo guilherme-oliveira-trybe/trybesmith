@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import ProductsService from '../services';
+import { ProductsService } from '../services';
 import * as types from '../types';
 
 const ProductsController = {

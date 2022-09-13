@@ -1,3 +1,4 @@
 import ProductsController from './products';
+import UserController from './user';
 
-export default ProductsController;
+export { ProductsController, UserController };
