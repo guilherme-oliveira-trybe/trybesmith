@@ -1,3 +1,4 @@
 import ProductsService from './products';
+import UserService from './user';
 
-export default ProductsService;
+export { ProductsService, UserService };

@@ -1,4 +1,4 @@
-import ProductsModel from '../models';
+import { ProductsModel } from '../models';
 import * as types from '../types';
 
 const ProductsService = {
