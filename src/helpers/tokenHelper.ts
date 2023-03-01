@@ -1,5 +1,5 @@
 import Jwt from 'jsonwebtoken';
-// const { CustomError } = require('../errors');
+import CustomError from '../errors/customError';
 
 const JWT_SECRET = 'teve que ser hardCoded';
 const JWT_CONFIG: object = { algorithm: 'HS256', expiresIn: '1d' };
@@ -9,14 +9,14 @@ const tokenHelper = {
     const token = Jwt.sign(payload, JWT_SECRET, JWT_CONFIG);
     return token;
   },
-  // verifyToken: (token: string) => {
-  //   try {
-  //     const dados = Jwt.verify(token, JWT_SECRET);
-  //     return dados;
-  //   } catch (error) {
-  //     if (error) throw new CustomError(401, 'Expired or invalid token');
-  //   }
-  // },
+  verifyToken: (payload: string) => {
+    try {
+      const dados = Jwt.verify(payload, JWT_SECRET);
+      return dados;
+    } catch (error) {
+      if (error) throw new CustomError(401, 'Expired or invalid token');
+    }
+  },
 };
 
 export default tokenHelper;
