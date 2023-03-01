@@ -31,9 +31,28 @@ type Order = {
   productsIds: number[]
 };
 
+type NewError = {
+  status: number,
+} & Error;
+
 enum HttpStatus {
   CREATED = 201,
   OK = 200,
 }
 
-export { ProductsBody, RegisteredProduct, HttpStatus, Product, UsersBody, UserToken, Order };
+type LoginBody = {
+  username: string,
+  password: string
+};
+
+export { 
+  ProductsBody, 
+  RegisteredProduct, 
+  HttpStatus, 
+  Product, 
+  UsersBody, 
+  UserToken, 
+  Order, 
+  NewError,
+  LoginBody,
+};
